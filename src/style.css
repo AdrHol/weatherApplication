@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+width: 100vw;
+height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: rgb(223,223,223);
+    background: linear-gradient(180deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 100%);
+}
+.navbar {
+    display: flex;
+    background-color: rgb(66, 66, 66);
+    align-items: center;
+    padding: 5px;
+}
+.logo {
+    color: aliceblue;
+    margin-left: 30px;
+    font-size: 1.5rem;
+
+}
+
+.main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    width: max(40%, 400px);
+    min-height: 40%;
+    padding: 20px;
+}
+
+div.location{
+    position: absolute;
+    top: -30%;
+    left: 0;
+    width: 100%;
+}
+img{
+    position: absolute;
+    top: -35%;
+    left: 70%;
+}
+
+p {
+    font-family: 'Secular One', sans-serif;
+    font-size: 3rem;
+}
+div.input {
+    margin-bottom: 30px;
+}
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+}
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(48, 48, 48);
+    color: aliceblue;
+    font-weight: bold;
+}
+div.data {
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    margin-bottom: 10px;
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+span.description {
+    display: inline-block;
+    margin-right: 30px;
+    width: 200px;
+    text-align: right;
+    font-family: 'Secular One', sans-serif;
+}
+
+span.value {
+    text-align: right;
+    font-family: 'Secular One', sans-serif;
+}
+
+div.Clouds { 
+    background: rgb(140,140,140);
+    background: linear-gradient(180deg, rgba(140,140,140,1) 0%, rgba(255,255,255,1) 100%);
+    transition: all 2s ease-in-out;
+}
+div.Thunderstorm{
+    background: rgb(24,23,92);
+    background: linear-gradient(180deg, rgba(24,23,92,1) 0%, rgba(33,20,182,1) 52%, rgba(232,237,0,1) 56%, rgba(164,171,118,1) 60%, rgba(255,255,255,1) 100%);
+    transition: all 2s ease-in-out;
+}
+div.Drizzle{
+    animation: change;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+div.Rain{
+    color: aliceblue;
+    background: rgb(24,23,91);
+    background: linear-gradient(180deg, rgba(24,23,91,1) 0%, rgba(33,20,182,1) 50%, rgba(0,8,110,1) 100%);
+}
+div.Snow{
+    background: rgb(182,182,182);
+    background: linear-gradient(180deg, rgba(182,182,182,1) 0%, rgba(253,253,252,1) 40%, rgba(255,255,255,1) 100%);
+    transition: all 2s ease-in-out;
+
+}
+div.Clear{
+    background: rgb(255,226,107);
+    background: linear-gradient(180deg, rgba(255,226,107,1) 0%, rgba(249,246,145,1) 50%, rgba(255,255,255,1) 100%);
+    transition: all 2s ease-in-out;
+
+}
+button#unit-change {
+    margin: 5px;
+    padding: 10px;
+}
+
+@media(max-width: 1000px){
+
+    span.description{
+        width: 150px;
+    }
+    li {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 400px){
+    span.description{
+        width: fit-content;
+    }
+    li {
+        font-size: 1rem;
+    }
+}
+
+@keyframes change {
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
